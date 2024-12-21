@@ -2,9 +2,7 @@ const doing = document.querySelector(".before");
 const timer = document.querySelector(".timer")
 console.log(timer);
 
-const date = new Date();
-date.setHours(13, 56, 0, 0); // устанавливаем время на 12:00 мск
-date.setDate(date.getDate()); // устанавливаем дату на сегодняшний день
+const date = new Date('2024-12-21T10:00:00+03:00');
 
 function updateTimer() {
     const now = new Date();
