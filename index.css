@@ -40,3 +40,11 @@ img {
         margin: 0 auto 15px auto;
     }
 }
+
+@media (max-width: 305px) {
+    h1 {
+        font-size: 2em;
+        padding-top: 0.5em;
+        margin: 0;
+    }
+}

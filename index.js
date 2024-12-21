@@ -3,7 +3,7 @@ const timer = document.querySelector(".timer")
 console.log(timer);
 
 const date = new Date();
-date.setHours(15, 0, 0, 0); // устанавливаем время на 12:00 мск
+date.setHours(13, 56, 0, 0); // устанавливаем время на 12:00 мск
 date.setDate(date.getDate()); // устанавливаем дату на сегодняшний день
 
 function updateTimer() {
