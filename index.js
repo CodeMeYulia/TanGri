@@ -14,7 +14,18 @@ function updateTimer() {
         const hours = Math.floor(minutes / 60);
         const days = Math.floor(hours / 24);
 
-        const formattedTime = `${String(days).padStart(2, '0')} дней ${String(hours % 24).padStart(2, '0')} часов ${String(minutes % 60).padStart(2, '0')} минут ${String(seconds % 60).padStart(2, '0')} секунд`;
+        const dayCount = function (days) {
+            const lastDigit = days % 10;
+            if (lastDigit === 1) return "день";
+            else if (lastDigit >= 2 && lastDigit <= 4) return "дня";
+            else return "дней";
+        };
+
+
+
+        console.log(dayCount);
+
+        const formattedTime = `${String(days).padStart(2, '0')} ${dayCount(days)} ${String(hours % 24).padStart(2, '0')} час ${String(minutes % 60).padStart(2, '0')} мин ${String(seconds % 60).padStart(2, '0')} сек`;
         document.querySelector('.timer').innerText = formattedTime;
         doing.innerText = "женаты -"
 
